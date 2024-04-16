@@ -553,7 +553,7 @@ set(CNOID_ENABLE_FREE_TYPE ${ENABLE_FREE_TYPE})
 if(ENABLE_GUI)
   # Qt
   include(cmake/ChoreonoidFindQt.cmake)
-  set(Qt5_DIR "c:/Qt/Qt5.12.12/5.12.12/msvc2015_64/lib/cmake/Qt5" )
+  set(Qt5_DIR "c:/Qt/Qt5.12.12/5.12.12/msvc2017_64/lib/cmake/Qt5" )
   # Add Multimedia and MultimediaWidgets to the list of Qt modules
   choreonoid_find_qt_package(Core Gui Widgets Network Svg Multimedia MultimediaWidgets)
   set(CMAKE_AUTOMOC OFF)
