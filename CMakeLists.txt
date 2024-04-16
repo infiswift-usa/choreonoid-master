@@ -553,7 +553,9 @@ set(CNOID_ENABLE_FREE_TYPE ${ENABLE_FREE_TYPE})
 if(ENABLE_GUI)
   # Qt
   include(cmake/ChoreonoidFindQt.cmake)
-  choreonoid_find_qt_package(Core Gui Widgets Network Svg)
+  set(Qt5_DIR "c:/Qt/Qt5.12.12/5.12.12/msvc2015_64/lib/cmake/Qt5" )
+  # Add Multimedia and MultimediaWidgets to the list of Qt modules
+  choreonoid_find_qt_package(Core Gui Widgets Network Svg Multimedia MultimediaWidgets)
   set(CMAKE_AUTOMOC OFF)
 
   if(MSVC)
@@ -563,6 +565,9 @@ if(ENABLE_GUI)
       optimized Qt5Network debug Qt5Networkd
       optimized Qt5Widgets debug Qt5Widgetsd
       optimized Qt5Svg debug Qt5Svgd
+      # Add the corresponding libraries for Qt Multimedia and MultimediaWidgets
+      optimized Qt5Multimedia debug Qt5Multimediad
+      optimized Qt5MultimediaWidgets debug Qt5MultimediaWidgetsd
       optimized libEGL debug libEGLd
       optimized libGLESv2 debug libGLESv2d
       optimized icuin51 debug icuin51d
@@ -580,15 +585,18 @@ if(ENABLE_GUI)
     install(DIRECTORY ${_qt5Core_install_prefix}/plugins/platforms DESTINATION bin FILES_MATCHING PATTERN "qwindows*.dll")
     install(DIRECTORY ${_qt5Core_install_prefix}/plugins/imageformats DESTINATION bin FILES_MATCHING PATTERN "*.dll")
     install(DIRECTORY ${_qt5Core_install_prefix}/plugins/styles DESTINATION bin FILES_MATCHING PATTERN "*.dll")
+    # Install the necessary plugins for Qt Multimedia and MultimediaWidgets
+    install(DIRECTORY ${_qt5Core_install_prefix}/plugins/mediaservice DESTINATION bin FILES_MATCHING PATTERN "*.dll")
+    install(DIRECTORY ${_qt5Core_install_prefix}/plugins/mediaplayer DESTINATION bin FILES_MATCHING PATTERN "*.dll")
   endif()
 
   function(install_qt_message_files_for_languages)
     if(MSVC)
       foreach(lang ${ARGV})
-	install(
-	  DIRECTORY ${_qt5Core_install_prefix}/translations
-	  DESTINATION bin
-	  FILES_MATCHING PATTERN "*_${lang}.qm")
+        install(
+          DIRECTORY ${_qt5Core_install_prefix}/translations
+          DESTINATION bin
+          FILES_MATCHING PATTERN "*_${lang}.qm")
       endforeach()
     endif()
   endfunction()

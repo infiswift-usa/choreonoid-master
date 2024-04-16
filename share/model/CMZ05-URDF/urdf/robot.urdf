@@ -1,0 +1,190 @@
+﻿<?xml version="1.0"?>  <!-- xmlコードを認識してくれる -->
+<robot name="CMZ05">
+    <material name="silver">
+        <texture />
+        <color rgba="0.9 0.9 0.9 1" />
+    </material>
+    <material name="white">
+        <texture />
+		<color rgba="1.0 1.0 1.0 1.0" />
+	</material>
+	<material name="black">
+		<color rgba="0.0 0.0 0.0 1.0" />
+	</material>
+    <link name="base_link">
+		<inertial>
+			<mass value="1.0" />
+			<inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+			<origin xyz="0.0 0.0 0.0" />
+		</inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 -0 0" />
+            <geometry>
+                <mesh filename="../meshes/link_base.stl" scale="1 1 1" />
+            </geometry>
+            <material name="white" />
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 -0 0" />
+            <geometry>
+                <mesh filename="../meshes/link_base.stl" scale="1 1 1" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="link_j1">
+		<inertial>
+			<mass value="1.0" />
+			<inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+			<origin xyz="0.0 0.0 0.0" />
+		</inertial>
+        <visual>
+            <origin xyz="0 0 -0.1866" rpy="0 -0 0" />
+            <geometry>
+                <mesh filename="../meshes/link_j1.stl" scale="1 1 1" />
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 -0.1866" rpy="0 -0 0" />
+            <geometry>
+                <mesh filename="../meshes/link_j1.stl" scale="1 1 1" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="link_j2">
+		<inertial>
+			<mass value="1.0" />
+			<inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+			<origin xyz="0.0 0.0 0.0" />
+		</inertial>
+        <visual>
+            <origin xyz="-0.05 -0.07848 -0.385" rpy="0 -0 0" />
+            <geometry>
+                <mesh filename="../meshes/link_j2.stl" scale="1 1 1" />
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="-0.05 -0.07848 -0.385" rpy="0 -0 0" />
+            <geometry>
+                <mesh filename="../meshes/link_j2.stl" scale="1 1 1" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="link_j3">
+		<inertial>
+			<mass value="1.0" />
+			<inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+			<origin xyz="0.0 0.0 0.0" />
+		</inertial>
+        <visual>
+            <origin xyz="-0.05 -0.06735 -0.805" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="../meshes/link_j3.stl" scale="1 1 1" />
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="-0.05 -0.06735 -0.805" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="../meshes/link_j3.stl" scale="1 1 1" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="link_j4">
+		<inertial>
+			<mass value="1.0" />
+			<inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+			<origin xyz="0.0 0.0 0.0" />
+		</inertial>
+        <visual>
+            <origin xyz="-0.1285 0 -0.93" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="../meshes/link_j4.stl" scale="1 1 1" />
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="-0.1285 0 -0.93" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="../meshes/link_j4.stl" scale="1 1 1" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="link_j5">
+		<inertial>
+			<mass value="1.0" />
+			<inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+			<origin xyz="0.0 0.0 0.0" />
+		</inertial>
+        <visual>
+            <origin xyz="-0.49 0.031 -0.93" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="../meshes/link_j5.stl" scale="1 1 1" />
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="-0.49 0.031 -0.93" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="../meshes/link_j5.stl" scale="1 1 1" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="link_j6">
+		<inertial>
+			<mass value="1.0" />
+			<inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+			<origin xyz="0.0 0.0 0.0" />
+		</inertial>
+        <visual>
+            <origin xyz="-0.549 0 -0.93" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="../meshes/link_j6.stl" scale="1 1 1" />
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="-0.549 0 -0.93" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="../meshes/link_j6.stl" scale="1 1 1" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="joint_J1" type="revolute">
+        <origin xyz="0 0 0.1866" rpy="0 -0 0" />
+        <axis xyz="0 0 1" />
+        <parent link="base_link" />
+        <child link="link_j1" />
+        <limit effort="100" velocity="7.85" lower="-2.96706" upper="2.96706" />
+    </joint>
+    <joint name="joint_J2" type="revolute">
+        <origin xyz="0.05 0.07848 0.1984" rpy="0 -0 0" />
+        <axis xyz="0 -1 0" />
+        <parent link="link_j1" />
+        <child link="link_j2" />
+        <limit effort="100" velocity="6.63" lower="-0.785398" upper="2.96706" />
+    </joint>
+    <joint name="joint_J3" type="revolute">
+        <origin xyz="0 -0.01113 0.42" rpy="0 -0 0" />
+        <axis xyz="0 -1 0" />
+        <parent link="link_j2" />
+        <child link="link_j3" />
+        <limit effort="100" velocity="9.08" lower="-1.169371" upper="3.316126" />
+    </joint>
+    <joint name="joint_J4" type="revolute">
+        <origin xyz="0.0785 -0.06735 0.125" rpy="0 0 0" />
+        <axis xyz="1 0 0" />
+        <parent link="link_j3" />
+        <child link="link_j4" />
+        <limit effort="100" velocity="9.6" lower="-3.316126" upper="3.316126" />
+    </joint>
+    <joint name="joint_J5" type="revolute">
+        <origin xyz="0.3615 -0.031 0" rpy="0 -0 0" />
+        <axis xyz="0 -1 0" />
+        <parent link="link_j4" />
+        <child link="link_j5" />
+        <limit effort="100" velocity="9.6" lower="-2.094395" upper="2.094395" />
+    </joint>
+    <joint name="joint_J6" type="revolute">
+        <origin xyz="0.059 0.031 0" rpy="0 -0 0" />
+        <axis xyz="1 0 0" />
+        <parent link="link_j5" />
+        <child link="link_j6" />
+        <limit effort="100" velocity="17.5" lower="-6.497861" upper="6.497861" />
+    </joint>
+</robot>

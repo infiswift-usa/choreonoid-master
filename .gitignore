@@ -29,3 +29,5 @@ qrc_*.cxx
 /Doxyfile
 messages.pot
 /choreonoid.*
+build/
+.vscode

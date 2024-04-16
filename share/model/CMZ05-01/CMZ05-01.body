@@ -1,0 +1,172 @@
+format: ChoreonoidBody
+format_version: 2.0
+angle_unit: degree
+name: "CMZ05"
+root_link: "base_link"
+links:
+  -
+    name: "base_link"
+    joint_name: "base_link"
+    joint_type: free
+    mass: 1
+    center_of_mass: [ 0, 0, 0 ]
+    inertia: [
+      1, 0, 0,
+      0, 1, 0,
+      0, 0, 1 ]
+    elements:
+      -
+        type: Shape
+        geometry:
+          type: Resource
+          uri: "../CMZ05-URDF/meshes/link_base.stl"
+  -
+    name: "link_j1"
+    parent: "base_link"
+    translation: [ 0, 0, 0.1866 ]
+    joint_name: "joint_J1"
+    joint_type: revolute
+    joint_axis: [ 0, 0, 1 ]
+    joint_id: 0
+    joint_range: [ -170, 170 ]
+    max_joint_velocity: 449.772
+    max_joint_effort: 100
+    mass: 1
+    center_of_mass: [ 0, 0, 0 ]
+    inertia: [
+      1, 0, 0,
+      0, 1, 0,
+      0, 0, 1 ]
+    elements:
+      -
+        type: Transform
+        translation: [ 0, 0, -0.1866 ]
+        elements:
+          -
+            type: Resource
+            uri: "../CMZ05-URDF/meshes/link_j1.stl"
+  -
+    name: "link_j2"
+    parent: "link_j1"
+    translation: [ 0.05, 0.07848, 0.1984 ]
+    joint_name: "joint_J2"
+    joint_type: revolute
+    joint_axis: [ 0, -1, 0 ]
+    joint_id: 1
+    joint_range: [ -45, 170 ]
+    max_joint_velocity: 379.871
+    max_joint_effort: 100
+    mass: 1
+    center_of_mass: [ 0, 0, 0 ]
+    inertia: [
+      1, 0, 0,
+      0, 1, 0,
+      0, 0, 1 ]
+    elements:
+      -
+        type: Transform
+        translation: [ -0.05, -0.07848, -0.385 ]
+        elements:
+          -
+            type: Resource
+            uri: "../CMZ05-URDF/meshes/link_j2.stl"
+  -
+    name: "link_j3"
+    parent: "link_j2"
+    translation: [ 0, -0.01113, 0.42 ]
+    joint_name: "joint_J3"
+    joint_type: revolute
+    joint_axis: [ 0, -1, 0 ]
+    joint_id: 2
+    joint_range: [ -67, 190 ]
+    max_joint_velocity: 520.246
+    max_joint_effort: 100
+    mass: 1
+    center_of_mass: [ 0, 0, 0 ]
+    inertia: [
+      1, 0, 0,
+      0, 1, 0,
+      0, 0, 1 ]
+    elements:
+      -
+        type: Transform
+        translation: [ -0.05, -0.06735, -0.805 ]
+        elements:
+          -
+            type: Resource
+            uri: "../CMZ05-URDF/meshes/link_j3.stl"
+  -
+    name: "link_j4"
+    parent: "link_j3"
+    translation: [ 0.0785, -0.06735, 0.125 ]
+    joint_name: "joint_J4"
+    joint_type: revolute
+    joint_axis: [ 1, 0, 0 ]
+    joint_id: 3
+    joint_range: [ -190, 190 ]
+    max_joint_velocity: 550.039
+    max_joint_effort: 100
+    mass: 1
+    center_of_mass: [ 0, 0, 0 ]
+    inertia: [
+      1, 0, 0,
+      0, 1, 0,
+      0, 0, 1 ]
+    elements:
+      -
+        type: Transform
+        translation: [ -0.1285, 0, -0.93 ]
+        elements:
+          -
+            type: Resource
+            uri: "../CMZ05-URDF/meshes/link_j4.stl"
+  -
+    name: "link_j5"
+    parent: "link_j4"
+    translation: [ 0.3615, -0.031, 0 ]
+    joint_name: "joint_J5"
+    joint_type: revolute
+    joint_axis: [ 0, -1, 0 ]
+    joint_id: 4
+    joint_range: [ -120, 120 ]
+    max_joint_velocity: 550.039
+    max_joint_effort: 100
+    mass: 1
+    center_of_mass: [ 0, 0, 0 ]
+    inertia: [
+      1, 0, 0,
+      0, 1, 0,
+      0, 0, 1 ]
+    elements:
+      -
+        type: Transform
+        translation: [ -0.49, 0.031, -0.93 ]
+        elements:
+          -
+            type: Resource
+            uri: "../CMZ05-URDF/meshes/link_j5.stl"
+  -
+    name: "link_j6"
+    parent: "link_j5"
+    translation: [ 0.059, 0.031, 0 ]
+    joint_name: "joint_J6"
+    joint_type: revolute
+    joint_axis: [ 1, 0, 0 ]
+    joint_id: 5
+    joint_range: [ -372.3, 372.3 ]
+    max_joint_velocity: 1002.68
+    max_joint_effort: 100
+    mass: 1
+    center_of_mass: [ 0, 0, 0 ]
+    inertia: [
+      1, 0, 0,
+      0, 1, 0,
+      0, 0, 1 ]
+    elements:
+      -
+        type: Transform
+        translation: [ -0.549, 0, -0.93 ]
+        elements:
+          -
+            type: Resource
+            uri: "../CMZ05-URDF/meshes/link_j6.stl"

@@ -29,6 +29,21 @@ list(APPEND project_files
 choreonoid_add_simple_controller(PA10PickupController PA10PickupController.cpp)
 list(APPEND project_files PA10Pickup.cnoid)
 
+# CMZ05
+choreonoid_add_simple_controller(CMZ05Controller CMZ05Controller.cpp)
+list(APPEND project_files CMZ05.cnoid)
+
+# CMZ05 - v2
+choreonoid_add_simple_controller(CMZ05Controller_v2 CMZ05Controller_v2.cpp)
+list(APPEND project_files CMZ05.cnoid)
+
+# CMZ05 - v3
+choreonoid_add_simple_controller(CMZ05Controller_v3 CMZ05Controller_v3.cpp)
+list(APPEND project_files CMZ05.cnoid)
+
+choreonoid_add_simple_controller(CMZ05RotationController CMZ05RotationController.cpp)
+list(APPEND project_files CMZ05.cnoid)
+
 # Universal Robots
 choreonoid_add_simple_controller(UniversalRobotPickupController UniversalRobotPickupController.cpp)
 list(APPEND project_files UR3Pickup.cnoid UR5Pickup.cnoid UR10Pickup.cnoid)
