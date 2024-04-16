@@ -2,7 +2,7 @@
 *~
 \#*\#
 /core
-ext/*
+# ext/*
 !ext/CMakeLists.txt
 Makefile
 CMakeFiles/
